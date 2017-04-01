@@ -5,9 +5,7 @@
 	margin:0;
 	padding:0;
 }
-html,body{
-	height: 100%
-}
+
 body {
 	background: #2c3e50; /* fallback for old browsers */
 background: -webkit-linear-gradient(180deg, #2c3e50 , #3498db); /* Chrome 10-25, Safari 5.1-6 */
@@ -75,20 +73,21 @@ header a:hover{
 main aside, main section{
 	width: 100%;
 	padding: 30px 0px;
+	
+
+}
+main section{
 	opacity: 0;
 	transform: translateX(-5%);
+	/*         name,duration, easing, delay, repeat */
 	animation: myAnimation 1s linear 1s forwards;
-
 }
 @keyframes myAnimation{
 	0%{
 		transform: translateX(-5%);
 		opacity: 0;
 	}
-	75%{
-		transform: translateX(-5%);
-		opacity: 0;
-		}
+
 	100%{
 		transform: translateX(0%);
 		opacity: 1;
@@ -96,6 +95,11 @@ main aside, main section{
 }
 main aside{
 	background-color: #ccc;
+	transform: translateX(-200%);
+	transition: all 600ms; 
+}
+main aside.active{
+	transform: translateX(0%);
 }
 @media (min-width: 768px){
 	main aside {
