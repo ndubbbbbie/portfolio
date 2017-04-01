@@ -75,7 +75,24 @@ header a:hover{
 main aside, main section{
 	width: 100%;
 	padding: 30px 0px;
+	opacity: 0;
+	transform: translateX(-5%);
+	animation: myAnimation 1s linear 1s forwards;
 
+}
+@keyframes myAnimation{
+	0%{
+		transform: translateX(-5%);
+		opacity: 0;
+	}
+	75%{
+		transform: translateX(-5%);
+		opacity: 0;
+		}
+	100%{
+		transform: translateX(0%);
+		opacity: 1;
+	}
 }
 main aside{
 	background-color: #ccc;
